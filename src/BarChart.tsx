@@ -23,15 +23,6 @@ export interface BarChartProps extends AbstractChartProps {
   horizontalLabelRotation?: number;
   verticalLabelRotation?: number;
   /**
-   * Solid bar fill insted of gradient - default: False.
-   */
-  solidBarFill?: boolean;
-  /**
-   * solid color to render if solidBarFill=true
-    default to empty string
-   */
-  barFill?: string;
-  /**
    * Show vertical labels - default: True.
    */
   withVerticalLabels?: boolean;
@@ -66,13 +57,7 @@ class BarChart extends AbstractChart<BarChartProps, BarChartState> {
     barFill = "",
   }: Pick<
     Omit<AbstractChartConfig, "data">,
-    | "width"
-    | "height"
-    | "paddingRight"
-    | "paddingTop"
-    | "barRadius"
-    | "solidBarFill"
-    | "barFill"
+    "width" | "height" | "paddingRight" | "paddingTop" | "barRadius"
   > & {
     data: number[];
   }) => {

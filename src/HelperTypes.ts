@@ -49,6 +49,15 @@ export interface ChartConfig {
    */
   useShadowColorFromDataset?: boolean;
   /**
+   * Solid bar fill insted of gradient - default: False.
+   */
+  solidBarFill?: boolean;
+  /**
+   * solid color to render if solidBarFill=true
+    default to empty string
+   */
+  barFill?: string;
+  /**
    * Defines the base color function that is used to calculate colors of labels and sectors used in a chart
    */
   color?: (opacity: number, index?: number) => string;
